@@ -7,3 +7,4 @@ streamlit
 numpy
 seaborn
 streamlit_javascript
+openpyxl
