@@ -186,16 +186,16 @@ def createPage():
             data2 = df_rango_fechas1(df_selected_client33)
 
         # Mostrar data de auditorías
-        st.dataframe(data2.loc[:, ["Fecha de Auditoria", "Bitácora", "Cliente", "Tipo de Monitoreo", "Fecha y Hora", "Estatus", "Situación", "Observaciones"]])
-  
-        uploaded_file = st.file_uploader('Seleccionar Informe de Auditoría SOFIA (.pdf)', type="pdf", help="Solo archivos PDF son soportados", )
+        st.dataframe(data2.loc[:, ["Fecha de Auditoria", "Bitácora", "Cliente", "Fecha y Hora", "Estatus", "Situación", "Observaciones"]])
 
-        col1, col2, col3 = st.columns(spec=[1,5,1], gap="small")
+        uploaded_file1 = st.file_uploader('Seleccionar Informe de Auditoría SOFIA (.pdf)', type="pdf", help="Solo archivos PDF son soportados", )
 
-        if uploaded_file is not None:
-            with col2:
+        col1x, col2x, col3x = st.columns(spec=[1,5,1], gap="small")
+
+        if uploaded_file1 is not None:
+            with col2x:
                 ui_width = st_javascript("window.innerWidth")
-                displayPDF(uploaded_file, ui_width -10)
+                displayPDF(uploaded_file1, ui_width -10)
 
         else:
             st.warning("Se requiere subir archivo en PDF")
