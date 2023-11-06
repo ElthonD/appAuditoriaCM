@@ -167,22 +167,22 @@ def createPage():
         st.write(f'Esta sección contiene registro de auditorías en aplicadas a SOFIA de Centro de Monitoreo de AI27 {df5.Mes.values[0]} {df5.Año.values[0].astype(int)} a {df5.Mes.values[-1]} {df5.Año.values[-1].astype(int)} .')
         #st.dataframe(data1)
 
-        xx1, xx2, xx3, xx4 = st.columns(4)
+        xxx1, xxx2, xxx3, xxx4 = st.columns(4)
 
         df5['Cliente'] = df5['Cliente'].astype(str)
-        with xx2:
-            containerC11 = st.container()
-            allC11 = st.checkbox("Seleccionar Todos", key="FFF")
-            if allC11: 
+        with xxx2:
+            containerC11x = st.container()
+            allC11x = st.checkbox("Seleccionar Todos", key="FFFx")
+            if allC11x: 
                 sorted_unique_client33 = sorted(df5['Cliente'].unique())
-                selected_client33 = containerC11.multiselect('Cliente(s):', sorted_unique_client33, sorted_unique_client33, key="FFF1")
+                selected_client33 = containerC11x.multiselect('Cliente(s):', sorted_unique_client33, sorted_unique_client33, key="FFF1x")
                 df_selected_client33 = df5[df5['Cliente'].isin(selected_client33)].astype(str)
             else:
                 sorted_unique_client33 = sorted(df5['Cliente'].unique())
-                selected_client33 = containerC11.multiselect('Cliente(s)', sorted_unique_client33, key="FFF1")
+                selected_client33 = containerC11x.multiselect('Cliente(s)', sorted_unique_client33, key="FFF1x")
                 df_selected_client33 = df5[df5['Cliente'].isin(selected_client33)].astype(str)
 
-        with xx3:
+        with xxx3:
             data2 = df_rango_fechas1(df_selected_client33)
 
         # Mostrar data de auditorías
