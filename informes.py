@@ -21,17 +21,8 @@ def createPage():
 
         #ruta del archivo
         data_path = r'./data/Data CM.xlsx'
-        # Cargar Archivo Excel
-        xl_file = pd.ExcelFile(data_path)
-        
-        # Leer Hojas de Excel
-        df_dict_flex = {}
-        for sheet_name in xl_file.sheet_names:
-            df_dict_flex[sheet_name] = xl_file.parse(sheet_name)
-        
-        df_merged = pd.concat(df_dict_flex.values(), ignore_index=True)
-
-        return df_merged
+        data_cm = pd.read_excel(data_path, sheet_name = "Data")
+        return data_cm
     
     @st.cache_data(show_spinner='Cargando Datos... Espere...', persist=True)
     def load_df_sofia():
@@ -39,17 +30,8 @@ def createPage():
         #ruta del archivo
         data_path = r'./data/Data SOFIA.xlsx'
 
-        # Cargar Archivo Excel
-        xl_file = pd.ExcelFile(data_path)
-        
-        # Leer Hojas de Excel
-        df_dict_flex = {}
-        for sheet_name in xl_file.sheet_names:
-            df_dict_flex[sheet_name] = xl_file.parse(sheet_name)
-        
-        df_merged = pd.concat(df_dict_flex.values(), ignore_index=True)
-
-        return df_merged
+        data_sofia= pd.read_excel(data_path, sheet_name = "Data")
+        return data_sofia
     
     def df_rango_fechas(df):
         
