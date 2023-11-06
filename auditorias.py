@@ -300,7 +300,7 @@ def createPage():
     
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='Llamadas',
+                   title='Llamadas (Indicador de Cumplimiento: 85%)',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
@@ -359,7 +359,7 @@ def createPage():
         
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='Documentación',
+                   title='Documentación (Indicador de Cumplimiento: 85%)',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
@@ -418,7 +418,7 @@ def createPage():
         
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='Homologación',
+                   title='Homologación (Indicador de Cumplimiento: 85%)',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
@@ -477,7 +477,7 @@ def createPage():
         
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='Paro de Motor',
+                   title='Paro de Motor (Indicador de Cumplimiento: 85%)',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
@@ -536,7 +536,7 @@ def createPage():
         
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='SOFIA',
+                   title='SOFIA (Indicador de Cumplimiento: 85%)',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
