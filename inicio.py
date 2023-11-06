@@ -7,7 +7,7 @@ from PIL import Image
 def createPage():
     
     # Title of the main page
-    pathLogo = pathLogo = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Calidad\img\AI27 Calidad.png'
+    pathLogo = r'./img/AI27 Calidad.png'
     display = Image.open(pathLogo)
     display = np.array(display)
     # st.image(display, width = 400)
