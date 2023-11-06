@@ -4,7 +4,8 @@ from streamlit_option_menu import option_menu
 import inicio, auditorias, informes # Importar páginas acá
 
  #### Páginas
-path_favicon = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Calidad\img\favicon1.png'
+
+path_favicon = r'./img/favicon1.png'
 im = Image.open(path_favicon)
 st.set_page_config(page_title='AI27 Calidad', page_icon=im, layout="wide")
 

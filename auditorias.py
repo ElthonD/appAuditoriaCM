@@ -24,7 +24,7 @@ def createPage():
     def load_df():
 
         #ruta del archivo
-        data_path = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Calidad\data\Data Auditoria.xlsx'
+        data_path = r'./data/Data CM.xlsx'
 
         # Cargar Archivo Excel
         xl_file = pd.ExcelFile(data_path)
@@ -42,7 +42,7 @@ def createPage():
     def load_df_sofia():
 
         #ruta del archivo
-        data_path = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Calidad\data\Data Auditoria sofia.xlsx'
+        data_path = r'./data/Data SOFIA.xlsx'
 
         # Cargar Archivo Excel
         xl_file = pd.ExcelFile(data_path)
