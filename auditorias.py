@@ -72,7 +72,9 @@ def createPage():
         df7 = df7.reset_index()
 
         # Preparar Dataframe Final
-        df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        #df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        df7['MesN'] = df7['Fecha de Auditoria'].apply(lambda x: x.month)
+        df7['Mes'] = df7['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         df7['Año'] = df7['Fecha de Auditoria'].dt.year
         #df7['Días del Mes'] = df7['Fecha de Auditoria'].dt.daysinmonth
         df7 = df7.fillna(0)
@@ -118,7 +120,9 @@ def createPage():
         df7 = df7.reset_index()
 
         # Preparar Dataframe Final
-        df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        #df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        df7['MesN'] = df7['Fecha de Auditoria'].apply(lambda x: x.month)
+        df7['Mes'] = df7['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         df7['Año'] = df7['Fecha de Auditoria'].dt.year
         #df7['Días del Mes'] = df7['Fecha de Auditoria'].dt.daysinmonth
         df7 = df7.fillna(0)
@@ -164,7 +168,9 @@ def createPage():
         df7 = df7.reset_index()
 
         # Preparar Dataframe Final
-        df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        #df7['Mes'] = df7['Fecha de Auditoria'].dt.month_name(locale='Spanish')
+        df7['MesN'] = df7['Fecha de Auditoria'].apply(lambda x: x.month)
+        df7['Mes'] = df7['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         df7['Año'] = df7['Fecha de Auditoria'].dt.year
         #df7['Días del Mes'] = df7['Fecha de Auditoria'].dt.daysinmonth
         df7 = df7.fillna(0)
