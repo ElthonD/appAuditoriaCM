@@ -149,7 +149,7 @@ def createPage():
 
         if uploaded_file is not None:
             with col2:
-                ui_width = st_javascript("window.innerWidth")
+                ui_width = st_javascript("window.innerWidth", key="abc")
                 displayPDF(uploaded_file, ui_width -10)
 
         else:
@@ -194,7 +194,7 @@ def createPage():
 
         if uploaded_file1 is not None:
             with col2x:
-                ui_width = st_javascript("window.innerWidth")
+                ui_width = st_javascript("window.innerWidth", key="bca")
                 displayPDF(uploaded_file1, ui_width -10)
 
         else:
