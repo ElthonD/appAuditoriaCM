@@ -44,7 +44,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Llamada'] == 'SI']
-        df1.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -52,7 +52,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Llamada'] == 'NO']
-        df3.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})
@@ -60,7 +60,7 @@ def createPage():
         # Para No Aplica
         df5 = df.copy()
         df5 = df5.loc[df5.loc[:, 'Llamada'] == 'NO APLICA']
-        df5.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df5.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Documentación Correcta', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df5 = df5.set_index('Fecha de Auditoria')
         df6 = pd.DataFrame(df5['Bitácora'].resample('M').count())
         df6 = df6.rename(columns={'Bitácora':'NO APLICA'})
@@ -90,7 +90,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Documentación Correcta'] == 'SI']
-        df1.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -98,7 +98,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Documentación Correcta'] == 'NO']
-        df3.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})
@@ -106,7 +106,7 @@ def createPage():
         # Para No Aplica
         df5 = df.copy()
         df5 = df5.loc[df5.loc[:, 'Documentación Correcta'] == 'NO APLICA']
-        df5.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df5.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Homologación','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df5 = df5.set_index('Fecha de Auditoria')
         df6 = pd.DataFrame(df5['Bitácora'].resample('M').count())
         df6 = df6.rename(columns={'Bitácora':'NO APLICA'})
@@ -136,7 +136,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Homologación'] == 'SI']
-        df1.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -144,7 +144,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Homologación'] == 'NO']
-        df3.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})
@@ -152,7 +152,7 @@ def createPage():
         # Para No Aplica
         df5 = df.copy()
         df5 = df5.loc[df5.loc[:, 'Homologación'] == 'NO APLICA']
-        df5.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
+        df5.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Paro de Motor','Observaciones'], axis = 'columns', inplace=True)    
         df5 = df5.set_index('Fecha de Auditoria')
         df6 = pd.DataFrame(df5['Bitácora'].resample('M').count())
         df6 = df6.rename(columns={'Bitácora':'NO APLICA'})
@@ -182,7 +182,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Paro de Motor'] == 'SI']
-        df1.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -190,7 +190,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Paro de Motor'] == 'NO']
-        df3.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})
@@ -198,7 +198,7 @@ def createPage():
         # Para No Aplica
         df5 = df.copy()
         df5 = df5.loc[df5.loc[:, 'Paro de Motor'] == 'NO APLICA']
-        df5.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
+        df5.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Documentación Correcta','Homologación','Observaciones'], axis = 'columns', inplace=True)    
         df5 = df5.set_index('Fecha de Auditoria')
         df6 = pd.DataFrame(df5['Bitácora'].resample('M').count())
         df6 = df6.rename(columns={'Bitácora':'NO APLICA'})
@@ -228,7 +228,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Estatus'] == 'CUMPLE']
-        df1.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -236,7 +236,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Estatus'] == 'NO CUMPLE']
-        df3.drop(['Nombre Auditor','Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})

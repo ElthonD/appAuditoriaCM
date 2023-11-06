@@ -137,7 +137,7 @@ def createPage():
             data1 = df_rango_fechas(df_selected_ts3)
 												
         # Mostrar data de auditorías
-        st.dataframe(data1.loc[:, ["Fecha de Auditoria", "Nombre Auditor", "Bitácora", "Turno", "Cliente", "Tipo de Monitoreo", "Fecha y Hora", "Anomalía", "Llamada", "Documentación Correcta", "Homologación", "Paro de Motor", "Observaciones"]])
+        st.dataframe(data1.loc[:, ["Fecha de Auditoria", "Bitácora", "Turno", "Cliente", "Tipo de Monitoreo", "Fecha y Hora", "Anomalía", "Llamada", "Documentación Correcta", "Homologación", "Paro de Motor", "Observaciones"]])
 
         # Mostrar informes
         st.markdown("<h2 style='text-align: left;'>Informes de Auditorías para Monitoristas del Centro de Monitoreo de AI27</h2>", unsafe_allow_html=True)
