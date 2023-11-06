@@ -237,7 +237,7 @@ def createPage():
         # Para Cumplimiento
         df1 = df.copy()
         df1 = df1.loc[df1.loc[:, 'Estatus'] == 'CUMPLE']
-        df1.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
+        df1.drop(['Cliente', 'Fecha y Hora', 'Anomalía', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
         df1 = df1.set_index('Fecha de Auditoria')
         df2 = pd.DataFrame(df1['Bitácora'].resample('M').count())
         df2 = df2.rename(columns={'Bitácora':'CUMPLE'})
@@ -245,7 +245,7 @@ def createPage():
         # Para No Cumplimiento
         df3 = df.copy()
         df3 = df3.loc[df3.loc[:, 'Estatus'] == 'NO CUMPLE']
-        df3.drop(['Tipo de Monitoreo', 'Turno', 'Cliente', 'Fecha y Hora', 'Anomalía', 'Llamada', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
+        df3.drop(['Cliente', 'Fecha y Hora', 'Anomalía', 'Situación','Observaciones'], axis = 'columns', inplace=True)    
         df3 = df3.set_index('Fecha de Auditoria')
         df4 = pd.DataFrame(df3['Bitácora'].resample('M').count())
         df4 = df4.rename(columns={'Bitácora':'NO CUMPLE'})
