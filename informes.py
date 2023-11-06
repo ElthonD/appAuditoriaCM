@@ -39,7 +39,7 @@ def createPage():
         df1 = df.copy() #Aca colocar dataframe filtrado
         df2 = df1.dropna()
 
-        fecha_inicio, fecha_fin = st.date_input('Fecha Inicio - Fecha Fin:',value = [], key="FCM")
+        fecha_inicio, fecha_fin = st.date_input('Fecha Inicio - Fecha Fin:',value = [], key="FCMx")
            
         if fecha_inicio < fecha_fin:
             pass
@@ -57,7 +57,7 @@ def createPage():
         df1 = df.copy() #Aca colocar dataframe filtrado
         df2 = df1.dropna()
 
-        fecha_inicio, fecha_fin = st.date_input('Fecha Inicio - Fecha Fin:',value = [], key="FCM")
+        fecha_inicio, fecha_fin = st.date_input('Fecha Inicio - Fecha Fin:',value = [], key="FCMxx")
            
         if fecha_inicio < fecha_fin:
             pass
