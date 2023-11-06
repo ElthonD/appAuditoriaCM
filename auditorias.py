@@ -477,7 +477,7 @@ def createPage():
         
         # Create a layout with interactive elements and two yaxes
         layout = go.Layout(height=700, width=1400, font=dict(size=10),
-                   title='Homologación',
+                   title='Paro de Motor',
                    plot_bgcolor="#FFF",
                    xaxis=dict(showgrid=False, title='Fecha',
                                         # Range selector with buttons
