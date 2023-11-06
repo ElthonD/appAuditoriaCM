@@ -6,3 +6,4 @@ plotly
 streamlit
 numpy
 seaborn
+streamlit_javascript
